@@ -31,7 +31,7 @@ final class Version20190429135829 extends AbstractMigration
         $requestTable->addColumn('id', 'integer', ['autoincrement' => true]);
         $requestTable->addColumn('name', 'string', ['length' => 256]);
         $requestTable->addColumn('comment', 'string', ['length' => 256]);
-        $requestTable->addColumn('photo', 'string', ['length' => 256, 'null' => true]);
+        $requestTable->addColumn('photo', 'string', ['length' => 256, 'notnull' => false]);
         $requestTable->setPrimaryKey(['id']);
     }
 
